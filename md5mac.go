@@ -222,7 +222,7 @@ func (m *MD5MAC) Update(input []byte) {
 			length -= BLOCKSIZE
 		}
 
-		copy(m.buffer[:], input) // TODO korrekt? nicht input[:size]?
+		m.buffer = input
 		m.position = 0
 	}
 
